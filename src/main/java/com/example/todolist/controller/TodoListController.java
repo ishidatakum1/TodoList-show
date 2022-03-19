@@ -19,7 +19,7 @@ public class TodoListController {
 	
 	@GetMapping("/todo")
 	public ModelAndView showTodoList(ModelAndView mv) {
-		mv.setViewName("todoList");
+		mv.setViewName("TodoList");
 		List<TodoListEntity> todoListEntity = todoListRepository.findAll();
 		mv.addObject("todoList", todoListEntity);
 		return mv;
